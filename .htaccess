@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^ft\.unusia\.ac\.id$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ft\.unusia\.ac\.id$
+RewriteRule ^/?$ "https\:\/\/ft\.unusia\.ac\.id\/" [R=301,L]
+
